@@ -1,24 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+    
+  const languages = [
+      { code: 'nl', name: 'Dutch' },
+      { code: 'en', name: 'English' },
+      { code: 'fr', name: 'French' },
+      { code: 'de', name: 'German' },
+      { code: 'es', name: 'Spanish' }
+  ];
+
+  const languageOptions = languages.map( language => {
+      return(
+          <option value={language.code}>{language.name}</option>
+      );
+  });
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="languages">
+        <select className="language-select language-origin">
+            {languageOptions}
+        </select>
+        <button className="language-switch">switch button</button>
+        <select className="language-select language-result">
+            {languageOptions}
+        </select>
+      </div>
+      <div className="texts">
+        <textarea className="text-origin"/>
+        <textarea className="text-result" disabled="disabled"/>
+      </div>
+      <div className="api-ref">
+        <a href="http://translate.yandex.com/" target="_blank">Powered By Yandex</a>
+      </div>
+      <div className="reset">
+        <button className="reset-btn">Reset</button>
+      </div>
     </div>
   );
 }

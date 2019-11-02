@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-
+  state = {
+      languageOrigin: 'nl',
+      languageResult: 'en',
+      textOrigin: '',
+      textResult: ''
+  };
 
   languages = [
       { code: 'nl', name: 'Dutch' },
@@ -19,14 +24,17 @@ class App extends Component {
   });
 
   render() {
+      const langOrig = this.state.languageOrigin;
+      const langResult = this.state.languageResult;
+
       return (
           <div className="App">
             <div className="languages">
-              <select className="language-select language-origin">
+              <select className="language-select language-origin" value={langOrig}>
                   {this.languageOptions}
               </select>
               <button className="language-switch">switch button</button>
-              <select className="language-select language-result">
+              <select className="language-select language-result" value={langResult}>
                   {this.languageOptions}
               </select>
             </div>

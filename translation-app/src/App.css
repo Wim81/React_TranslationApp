@@ -1,5 +1,77 @@
 .App {
-
+  box-sizing: border-box;
+  width: 90vw;
+  max-width: 480px;
+  margin: 2rem auto;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+  padding: 1rem;
 }
+
+.title {
+  text-align: center;
+  color: darkgreen;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid darkgreen;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-select {
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.language-switch-wrapper {
+  transform: rotate(90deg);
+  text-align: center;
+}
+
+.language-switch-wrapper:after {
+  content: '\f362';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.language-switch {
+  display: none;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.api-ref {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  color: darkgreen;
+  background-color: lightgreen;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
 
 

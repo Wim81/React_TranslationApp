@@ -29,11 +29,14 @@ class App extends Component {
 
       return (
           <div className="App">
+            <h1 className="title">{this.props.title}</h1>
             <div className="languages">
               <select className="language-select language-origin" value={langOrig}>
                   {this.languageOptions}
               </select>
-              <button className="language-switch">switch button</button>
+              <div className="language-switch-wrapper">
+                <button className="language-switch">switch button</button>
+              </div>
               <select className="language-select language-result" value={langResult}>
                   {this.languageOptions}
               </select>

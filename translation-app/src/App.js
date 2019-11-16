@@ -41,7 +41,7 @@ class App extends Component {
 
     updateOriginalText = (e) => {
         this.setState({textOrigin: e.target.value});
-    }
+    };
 
   render() {
       const langOrig = this.state.languageOrigin;
@@ -51,7 +51,7 @@ class App extends Component {
           <div className="App">
             <h1 className="title">{this.props.title}</h1>
             <div className="languages">
-              <select className="language-select language-origin" defaultValue={langOrig} onChange={this.updateOriginalLanguage}>
+              <select className="language-select language-origin" value={langOrig} onChange={this.updateOriginalLanguage}>
                   {this.languageOptions}
               </select>
               <div className="language-switch-wrapper">

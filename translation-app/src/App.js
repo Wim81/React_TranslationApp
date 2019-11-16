@@ -24,18 +24,6 @@ class App extends Component {
       );
   });
 
-  componentDidUpdate() {
-      let firsttest = '';
-      if (this.state.textOrigin === '') {
-          // no action
-      } else {
-          //API call
-          firsttest = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=hero&lang=en-nl')
-              .then(response => console.log(response))
-              .catch(error => console.log(error));
-      }
-  };
-
   switchLanguagesHandler = () => {
       const prevOrig = this.state.languageOrigin;
       const prevResult = this.state.languageResult;
@@ -54,6 +42,22 @@ class App extends Component {
 
     updateOriginalText = (e) => {
         this.setState({textOrigin: e.target.value});
+    };
+
+    componentDidUpdate(prevProps, prevState) {
+        let firsttest = '';
+        if (this.state.textOrigin === '' || prevState.textOrigin === this.state.textOrigin) {
+            // no action
+        } else {
+            let newInput = this.state.textOrigin;
+            //API call
+            firsttest = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=' + newInput + '&lang=en-nl')
+                .then(response => {
+                    this.setState({textResult: response.data.text[0]});
+                    return (response.data.text[0]);
+                })
+                .catch(error => console.log(error));
+        }
     };
 
   render() {
@@ -78,7 +82,7 @@ class App extends Component {
             </div>
             <div className="texts">
               <textarea className="text-origin" onChange={this.updateOriginalText}/>
-              <textarea className="text-result" disabled="disabled"/>
+              <textarea className="text-result" disabled="disabled" value={this.state.textResult}/>
             </div>
             <div className="api-ref">
               <a href="http://translate.yandex.com/" target="_blank" rel="noopener noreferrer">Powered By Yandex</a>

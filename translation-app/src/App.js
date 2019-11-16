@@ -23,6 +23,10 @@ class App extends Component {
       );
   });
 
+  switchLanguagesHandler = () => {
+      console.log("time to switch");
+  }
+
   render() {
       const langOrig = this.state.languageOrigin;
       const langResult = this.state.languageResult;
@@ -35,7 +39,9 @@ class App extends Component {
                   {this.languageOptions}
               </select>
               <div className="language-switch-wrapper">
-                <button className="language-switch">switch button</button>
+                <button className="language-switch" onClick={this.switchLanguagesHandler}>
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
               </div>
               <select className="language-select language-result" value={langResult}>
                   {this.languageOptions}
@@ -46,7 +52,7 @@ class App extends Component {
               <textarea className="text-result" disabled="disabled"/>
             </div>
             <div className="api-ref">
-              <a href="http://translate.yandex.com/" target="_blank">Powered By Yandex</a>
+              <a href="http://translate.yandex.com/" target="_blank" rel="noopener noreferrer">Powered By Yandex</a>
             </div>
             <div className="reset">
               <button className="reset-btn">Reset</button>

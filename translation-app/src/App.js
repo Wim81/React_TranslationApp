@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
   state = {
@@ -22,6 +23,18 @@ class App extends Component {
           <option key={language.code} value={language.code}>{language.name}</option>
       );
   });
+
+  componentDidUpdate() {
+      let firsttest = '';
+      if (this.state.textOrigin === '') {
+          // no action
+      } else {
+          //API call
+          firsttest = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=hero&lang=en-nl')
+              .then(response => console.log(response))
+              .catch(error => console.log(error));
+      }
+  };
 
   switchLanguagesHandler = () => {
       const prevOrig = this.state.languageOrigin;
@@ -56,7 +69,7 @@ class App extends Component {
               </select>
               <div className="language-switch-wrapper">
                 <button className="language-switch" onClick={this.switchLanguagesHandler}>
-                    <i class="fas fa-exchange-alt"></i>
+                    <i className="fas fa-exchange-alt"></i>
                 </button>
               </div>
               <select className="language-select language-result" value={langResult} onChange={this.updateResultLanguage}>

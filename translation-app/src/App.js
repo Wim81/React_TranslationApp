@@ -39,6 +39,10 @@ class App extends Component {
         this.setState({languageResult: e.target.value});
     };
 
+    updateOriginalText = (e) => {
+        this.setState({textOrigin: e.target.value});
+    }
+
   render() {
       const langOrig = this.state.languageOrigin;
       const langResult = this.state.languageResult;
@@ -60,7 +64,7 @@ class App extends Component {
               </select>
             </div>
             <div className="texts">
-              <textarea className="text-origin"/>
+              <textarea className="text-origin" onChange={this.updateOriginalText}/>
               <textarea className="text-result" disabled="disabled"/>
             </div>
             <div className="api-ref">

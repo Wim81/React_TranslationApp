@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d46a84-943d-40db-bc41-055fba37a2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/src/App.css" afterPath="$PROJECT_DIR$/translation-app/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/src/App.js" afterPath="$PROJECT_DIR$/translation-app/src/App.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/translation-app/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="50" />
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -95,8 +94,8 @@
         <option value="$PROJECT_DIR$/translation-app/public/index.html" />
         <option value="$PROJECT_DIR$/translation-app/.env" />
         <option value="$PROJECT_DIR$/translation-app/.gitignore" />
-        <option value="$PROJECT_DIR$/translation-app/src/App.js" />
         <option value="$PROJECT_DIR$/translation-app/src/App.css" />
+        <option value="$PROJECT_DIR$/translation-app/src/App.js" />
       </list>
     </option>
   </component>
@@ -277,12 +276,12 @@
       <updated>1572698489149</updated>
       <workItem from="1572698493175" duration="7167000" />
       <workItem from="1572788473807" duration="668000" />
-      <workItem from="1573918413111" duration="1686000" />
+      <workItem from="1573918413111" duration="1859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9521000" />
+    <option name="totallyTimeSpent" value="9694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1552" height="850" extended-state="6" />
@@ -477,7 +476,7 @@
     <entry file="file://$PROJECT_DIR$/translation-app/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="50" />
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

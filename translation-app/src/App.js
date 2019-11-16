@@ -24,7 +24,11 @@ class App extends Component {
   });
 
   switchLanguagesHandler = () => {
-      console.log("time to switch");
+      const prevOrig = this.state.languageOrigin;
+      const prevResult = this.state.languageResult;
+      this.setState({
+          languageOrigin: prevResult, languageResult: prevOrig
+      });
   }
 
   render() {

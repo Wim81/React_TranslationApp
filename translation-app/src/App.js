@@ -19,7 +19,7 @@ class App extends Component {
 
   languageOptions = this.languages.map( language => {
       return(
-          <option value={language.code}>{language.name}</option>
+          <option key={language.code} value={language.code}>{language.name}</option>
       );
   });
 

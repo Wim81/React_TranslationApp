@@ -29,7 +29,15 @@ class App extends Component {
       this.setState({
           languageOrigin: prevResult, languageResult: prevOrig
       });
-  }
+  };
+
+    updateOriginalLanguage = (e) => {
+        this.setState({languageOrigin: e.target.value});
+    };
+
+    updateResultLanguage = (e) => {
+        this.setState({languageResult: e.target.value});
+    };
 
   render() {
       const langOrig = this.state.languageOrigin;
@@ -39,7 +47,7 @@ class App extends Component {
           <div className="App">
             <h1 className="title">{this.props.title}</h1>
             <div className="languages">
-              <select className="language-select language-origin" value={langOrig}>
+              <select className="language-select language-origin" defaultValue={langOrig} onChange={this.updateOriginalLanguage}>
                   {this.languageOptions}
               </select>
               <div className="language-switch-wrapper">
@@ -47,7 +55,7 @@ class App extends Component {
                     <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
-              <select className="language-select language-result" value={langResult}>
+              <select className="language-select language-result" value={langResult} onChange={this.updateResultLanguage}>
                   {this.languageOptions}
               </select>
             </div>

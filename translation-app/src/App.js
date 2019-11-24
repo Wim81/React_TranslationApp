@@ -45,13 +45,15 @@ class App extends Component {
     };
 
     componentDidUpdate(prevProps, prevState) {
-        let firsttest = '';
-        if (this.state.textOrigin === '' || prevState.textOrigin === this.state.textOrigin) {
+        let newOutput = '';
+        if (prevState.textOrigin === this.state.textOrigin) {
             // no action
+        } else if ( this.state.textOrigin === '' ) {
+            this.setState({textResult: ''});
         } else {
             let newInput = this.state.textOrigin;
             //API call
-            firsttest = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=' + newInput + '&lang=en-nl')
+            newOutput = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=' + newInput + '&lang=en-nl')
                 .then(response => {
                     this.setState({textResult: response.data.text[0]});
                     return (response.data.text[0]);

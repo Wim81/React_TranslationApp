@@ -61,7 +61,7 @@ class App extends Component {
             this.setState({textOrigin: '', textResult: '', reset: false});
         } else if (this.state.textOrigin === '' && this.state.textResult === '') {
             // no action
-        } else if (prevState.textOrigin === this.state.textOrigin) {
+        } else if (prevState.textOrigin === this.state.textOrigin && prevState.languageResult === this.state.languageResult) {
             // no action
         } else if ( this.state.textOrigin === '' ) {
             this.setState({textResult: ''});

@@ -7,7 +7,8 @@ class App extends Component {
       languageOrigin: 'nl',
       languageResult: 'en',
       textOrigin: '',
-      textResult: ''
+      textResult: '',
+      reset: false
   };
 
   languages = [
@@ -44,9 +45,18 @@ class App extends Component {
         this.setState({textOrigin: e.target.value});
     };
 
+    resetTexts = () => {
+        this.setState({reset: true});
+    };
+
     componentDidUpdate(prevProps, prevState) {
         let newOutput = '';
-        if (prevState.textOrigin === this.state.textOrigin) {
+
+        if (this.state.reset === true ) {
+            this.setState({textOrigin: '', textResult: '', reset: false});
+        } else if (this.state.textOrigin === '' && this.state.textResult === '') {
+            // no action
+        } else if (prevState.textOrigin === this.state.textOrigin) {
             // no action
         } else if ( this.state.textOrigin === '' ) {
             this.setState({textResult: ''});
@@ -83,14 +93,14 @@ class App extends Component {
               </select>
             </div>
             <div className="texts">
-              <textarea className="text-origin" onChange={this.updateOriginalText}/>
+              <textarea className="text-origin" onChange={this.updateOriginalText} value={this.state.textOrigin}/>
               <textarea className="text-result" disabled="disabled" value={this.state.textResult}/>
             </div>
             <div className="api-ref">
               <a href="http://translate.yandex.com/" target="_blank" rel="noopener noreferrer">Powered By Yandex</a>
             </div>
             <div className="reset">
-              <button className="reset-btn">Reset</button>
+              <button className="reset-btn" onClick={this.resetTexts}>Reset</button>
             </div>
           </div>
       );

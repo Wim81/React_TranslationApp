@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d46a84-943d-40db-bc41-055fba37a2ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/translation-app/src/components/LanguageSelect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/translation-app/src/components/LanguageSwitch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/translation-app/src/components/LanguageTextarea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/translation-app/src/components/ResetButton.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/src/App.js" afterPath="$PROJECT_DIR$/translation-app/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/public/index.html" afterPath="$PROJECT_DIR$/translation-app/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/src/App.css" afterPath="$PROJECT_DIR$/translation-app/src/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translation-app/src/index.js" afterPath="$PROJECT_DIR$/translation-app/src/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,14 +19,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/translation-app/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2684">
+            <state relative-caret-position="968">
               <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/translation-app/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/translation-app/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,16 +100,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/translation-app/src/index.css" />
-        <option value="$PROJECT_DIR$/translation-app/src/index.js" />
         <option value="$PROJECT_DIR$/translation-app/.env" />
         <option value="$PROJECT_DIR$/translation-app/.gitignore" />
-        <option value="$PROJECT_DIR$/translation-app/src/App.css" />
-        <option value="$PROJECT_DIR$/translation-app/public/index.html" />
         <option value="$PROJECT_DIR$/translation-app/src/components/LanguageSelect.js" />
         <option value="$PROJECT_DIR$/translation-app/src/components/LanguageSwitch.js" />
         <option value="$PROJECT_DIR$/translation-app/src/components/ResetButton.js" />
         <option value="$PROJECT_DIR$/translation-app/src/components/LanguageTextarea.js" />
         <option value="$PROJECT_DIR$/translation-app/src/App.js" />
+        <option value="$PROJECT_DIR$/translation-app/public/index.html" />
+        <option value="$PROJECT_DIR$/translation-app/src/index.js" />
+        <option value="$PROJECT_DIR$/translation-app/src/App.css" />
       </list>
     </option>
   </component>
@@ -277,18 +294,18 @@
       <workItem from="1573999916094" duration="67000" />
       <workItem from="1574609998883" duration="2564000" />
       <workItem from="1574861536858" duration="162000" />
-      <workItem from="1575058756851" duration="7056000" />
+      <workItem from="1575058756851" duration="8452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29804000" />
+    <option name="totallyTimeSpent" value="31200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1552" height="850" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17292225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17292225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -539,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translation-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/translation-app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -553,26 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translation-app/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/translation-app/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="103" lean-forward="false" selection-start-line="0" selection-start-column="103" selection-end-line="0" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/translation-app/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,13 +602,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/translation-app/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/translation-app/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2684">
+        <state relative-caret-position="968">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation-app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation-app/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

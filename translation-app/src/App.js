@@ -26,10 +26,15 @@ class App extends Component {
   });
 
   switchLanguagesHandler = () => {
-      const prevOrig = this.state.languageOrigin;
-      const prevResult = this.state.languageResult;
+      const prevLanguageOrig = this.state.languageOrigin;
+      const prevLanguageResult = this.state.languageResult;
+      const prevTextOrig = this.state.textOrigin;
+      const prevTextResult = this.state.textResult;
       this.setState({
-          languageOrigin: prevResult, languageResult: prevOrig
+          languageOrigin: prevLanguageResult,
+          languageResult: prevLanguageOrig,
+          textOrigin: prevTextResult,
+          textResult: prevTextOrig
       });
   };
 

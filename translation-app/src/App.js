@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import LanguageSelect from './components/LanguageSelect';
+import LanguageSwitch from './components/LanguageSwitch';
+import LanguageTextarea from './components/LanguageTextarea';
+import ResetButton from './components/ResetButton';
 import './App.css';
 import axios from 'axios';
 
@@ -85,28 +89,40 @@ class App extends Component {
           <div className="App">
             <h1 className="title">{this.props.title}</h1>
             <div className="languages">
-              <select className="language-select language-origin" value={langOrig} onChange={this.updateOriginalLanguage}>
-                  {this.languageOptions}
-              </select>
-              <div className="language-switch-wrapper">
-                <button className="language-switch" onClick={this.switchLanguagesHandler}>
-                    <i className="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-              <select className="language-select language-result" value={langResult} onChange={this.updateResultLanguage}>
-                  {this.languageOptions}
-              </select>
+                <LanguageSelect
+                    classes="language-select language-origin"
+                    value={langOrig}
+                    changed={this.updateOriginalLanguage}>
+                    {this.languageOptions}
+                </LanguageSelect>
+
+              <LanguageSwitch clicked={this.switchLanguagesHandler} />
+
+                <LanguageSelect
+                    classes="language-select language-result"
+                    value={langResult}
+                    changed={this.updateResultLanguage}>
+                    {this.languageOptions}
+                </LanguageSelect>
             </div>
             <div className="texts">
-              <textarea className="text-origin" onChange={this.updateOriginalText} value={this.state.textOrigin}/>
-              <textarea className="text-result" disabled="disabled" value={this.state.textResult}/>
+
+                <LanguageTextarea
+                    classes="text-origin"
+                    changed={this.updateOriginalText}
+                    value={this.state.textOrigin}
+                    disabled={false} />
+                <LanguageTextarea
+                    classes="text-result"
+                    changed={null}
+                    value={this.state.textResult}
+                    disabled="disabled" />
+
             </div>
             <div className="api-ref">
               <a href="http://translate.yandex.com/" target="_blank" rel="noopener noreferrer">Powered By Yandex</a>
             </div>
-            <div className="reset">
-              <button className="reset-btn" onClick={this.resetTexts}>Reset</button>
-            </div>
+              <ResetButton clicked={this.resetTexts} />
           </div>
       );
   }

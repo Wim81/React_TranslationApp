@@ -21,10 +21,8 @@ const StyledResetButton = styled.button`
     }
 `;
 
-const ResetButton = (props) => {
-    return(
+const ResetButton = (props) => (
         <StyledResetButton onClick={props.clicked}>Reset</StyledResetButton>
-    );
-};
+);
 
 export default ResetButton;

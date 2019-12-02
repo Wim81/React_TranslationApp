@@ -90,7 +90,7 @@ class App extends Component {
             <h1 className="title">{this.props.title}</h1>
             <div className="languages">
                 <LanguageSelect
-                    classes="language-select language-origin"
+                    classes="language-origin"
                     value={langOrig}
                     changed={this.updateOriginalLanguage}>
                     {this.languageOptions}
@@ -99,7 +99,7 @@ class App extends Component {
               <LanguageSwitch clicked={this.switchLanguagesHandler} />
 
                 <LanguageSelect
-                    classes="language-select language-result"
+                    classes="language-result"
                     value={langResult}
                     changed={this.updateResultLanguage}>
                     {this.languageOptions}

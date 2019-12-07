@@ -12,7 +12,8 @@ class App extends Component {
       languageResult: 'en',
       textOrigin: '',
       textResult: '',
-      reset: false
+      reset: false,
+      error: false
   };
 
   languages = [
@@ -62,7 +63,7 @@ class App extends Component {
         let newOutput = '';
 
         if (this.state.reset === true ) {
-            this.setState({textOrigin: '', textResult: '', reset: false});
+            this.setState({textOrigin: '', textResult: '', reset: false, error: false});
         } else if (this.state.textOrigin === '' && this.state.textResult === '') {
             // no action
         } else if (prevState.textOrigin === this.state.textOrigin && prevState.languageResult === this.state.languageResult) {
@@ -74,16 +75,35 @@ class App extends Component {
             //API call
             newOutput = axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20191116T174127Z.03cac877ca84e4c6.3ae9da568e4fdec7a0c1b30c0f0dcb857f7ece6b&text=' + newInput + '&lang=' + this.state.languageOrigin + '-' + this.state.languageResult)
                 .then(response => {
-                    this.setState({textResult: response.data.text[0]});
+                    this.setState({
+                        textResult: response.data.text[0],
+                        error: false
+                    });
+                    // console.log(response.data.code);
                     return (response.data.text[0]);
                 })
-                .catch(error => console.log(error));
+                .catch(error => {
+                    this.setState({error: true});
+                });
         }
     };
 
   render() {
       const langOrig = this.state.languageOrigin;
       const langResult = this.state.languageResult;
+
+      let resultTextArea = <LanguageTextarea
+          classes="text-result text-result-error"
+          changed={null}
+          value="Something went wrong. Most probably, the API limit has been reached. Try again later please. If the issue continues, please inform the administrator."
+          disabled="disabled" />;
+      if (!this.state.error) {
+          resultTextArea = <LanguageTextarea
+              classes="text-result"
+              changed={null}
+              value={this.state.textResult}
+              disabled="disabled" />;
+      }
 
       return (
           <div className="App">
@@ -112,11 +132,7 @@ class App extends Component {
                     changed={this.updateOriginalText}
                     value={this.state.textOrigin}
                     disabled={false} />
-                <LanguageTextarea
-                    classes="text-result"
-                    changed={null}
-                    value={this.state.textResult}
-                    disabled="disabled" />
+                {resultTextArea}
 
             </div>
             <div className="api-ref">

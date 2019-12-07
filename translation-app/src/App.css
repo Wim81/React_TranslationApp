@@ -51,3 +51,8 @@ body {
 .api-ref a:hover {
   color: #c1fd00;
 }
+
+.text-result-error {
+  color: red;
+  border: 1px solid red;
+}
